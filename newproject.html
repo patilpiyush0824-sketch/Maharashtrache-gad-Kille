@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>महाराष्ट्राचे गड किल्ले</title>
+
+<style>
+
+/* CUSTOM FONT */
+@font-face{
+font-family:'AMS';
+src:url('fonts/AMSHASTKALA1.TTF') format('truetype');
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{background:lightblue;
+color: white;
+}
+
+/* HEADER */
+
+.header{
+width:100%;
+background:#f4c664;
+padding:6px 15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.left-section{
+display:flex;
+align-items:center;
+}
+
+.header img{
+width:35px;
+margin-right:15px;
+}
+
+.header h1{
+color:black;
+margin:0;
+font-size:15px;
+}
+
+.right-section button{
+margin-left:6px;
+padding:4px 8px;
+border:1px solid #aaa;
+cursor:pointer;
+border-radius:4px;
+font-weight:bold;
+}
+
+.black-btn{
+background:black;
+color:white;
+}
+
+.lang-btn{
+background:orange;
+color:white;
+border:none;
+}
+
+/* SLIDER */
+
+.slider{
+width:100%;
+height:100vh;
+background-size:cover;
+background-position:center;
+animation:slide 15s infinite;
+position:relative;
+}
+
+@keyframes slide{
+0%{background-image:url("01.jpg");}
+33%{background-image:url("02.jpg");}
+66%{background-image:url("03.jpg");}
+100%{background-image:url("04.jpg");}
+}
+
+/* HERO TEXT */
+
+.left-box{
+position:absolute;
+top:50%;
+right:50px;
+transform:translateY(-50%);
+text-align:center;
+}
+
+/* AMS FONT */
+
+.left-box h1{
+font-size:90px;
+color:#841a02;
+font-family:'AMS';
+line-height:1.2;
+
+text-shadow:
+-3px -3px 0 #fff,
+3px -3px 0 #fff,
+-3px 3px 0 #fff,
+3px 3px 0 #fff,
+10px 10px 20px rgba(0,0,0,0.4);
+}
+
+.left-box p{
+margin:20px 0;
+font-size:25px;
+color:white;
+}
+
+.btn{
+display:inline-block;
+padding:12px 30px;
+border:2px solid #f5c26b;
+color:#f5c26b;
+text-decoration:none;
+transition:0.4s;
+}
+
+.btn:hover{
+background:#f5c26b;
+color:black;
+}
+
+/* TIMELINE */
+
+.timeline{
+padding:80px 10%;
+background-image:url("10.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.timeline h2{
+text-align:center;
+margin-bottom:60px;
+font-size:40px;
+color:#f5c26b;
+}
+
+.timeline-container{
+position:relative;
+}
+
+.timeline-container::before{
+content:'';
+position:absolute;
+left:50%;
+width:4px;
+height:100%;
+background:#f5c26b;
+transform:translateX(-50%);
+}
+
+/* ONLY BOX COLOR CHANGED */
+
+.timeline-box{
+width:45%;
+padding:20px;
+background:#4a1f1f;
+margin-bottom:40px;
+border-radius:10px;
+}
+
+.timeline-box:nth-child(even){
+margin-left:55%;
+}
+
+/* FIX ZIG-ZAG */
+.timeline-item{
+    position:relative;
+    margin:40px 0;
+}
+
+.left{
+    margin-right:auto;
+}
+
+.right{
+    margin-left:auto;
+}
+
+/* LINK FULL BOX */
+/* remove blue link */
+.timeline-box a{
+    text-decoration:none;
+    color:white;
+    display:block;
+}
+
+/* simple animation */
+.timeline-box{
+    transition:0.3s;
+}
+
+.timeline-box:hover{
+    transform:translateY(-5px);
+
+}/* GALLERY */
+
+.gallery {
+    padding: 80px 10%;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: #f5c26b;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    background: lightblue;
+    gap: 20px;
+}
+
+/* Optional: make it responsive for smaller screens */
+@media (max-width: 800px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 column on mobiles */
+    }
+}
+
+.card{
+position:relative;
+overflow:hidden;
+border-radius:15px;
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+transition:0.5s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+background:rgba(0,0,0,0.7);
+width:100%;
+text-align:center;
+padding:15px;
+font-size:20px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+color:#f5c26b;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="left-section">
+<img src="D:\WPD PROJECT\NEW WPD PROJECT\castle.png">
+<h1>महाराष्ट्राचे गड किल्ले</h1>
+</div>
+
+<div class="right-section">
+<button>A+</button>
+<button>A-</button>
+<button>A</button>
+<button class="black-btn">A</button>
+<button>EN</button>
+<button class="lang-btn">मराठी</button>
+</div>
+
+</div>
+
+<div class="slider">
+
+<div class="left-box">
+<h1>maharaVo^acae gaD ikllae</h1>
+<p>शौर्य • इतिहास • स्वराज्य</p>
+<a href="#timeline" class="btn">Explore History</a>
+</div>
+
+</div>
+
+<section class="timeline" id="timeline">
+
+<h2>शिवकालीन इतिहास</h2>
+
+<div class="timeline-container">
+
+<div class="timeline-item">
+<div class="timeline-box left">
+<a href="shivaji.html">
+<h3>1630</h3>
+<p>शिवनेरी येथे छत्रपती शिवाजी महाराजांचा जन्म</p>
+</a>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-box right">
+<a href="torna.html">
+<h3>1645</h3>
+<p>तोरणा किल्ला जिंकला</p>
+</a>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-box left">
+<a href="rajyabhishek.html">
+<h3>1674</h3>
+<p>रायगड येथे राज्याभिषेक</p>
+</a>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-box right">
+<a href="death.html">
+<h3>1680</h3>
+
+<p>महापरिनिर्वाण</p>
+</a>
+</div>
+</div>
+
+</div>
+
+</section>
+<section class="gallery">
+
+<h2>प्रसिद्ध किल्ले</h2>
+
+<div class="gallery-grid">
+
+<div class="card">
+<a href="Raigadh.html"><img src="Raigad01.jpg"></a>
+<div class="overlay">रायगड किल्ला</div>
+</div>
+
+<div class="card">
+<a href="pratap.html"><img src="Pratapgad02.jpg"></a>
+<div class="overlay">प्रतापगड किल्ला</div>
+</div>
+
+<div class="card">
+<a href="sinhgad.html"><img src="Sinhgad03.jpg"></a>
+<div class="overlay">सिंहगड किल्ला</div>
+</div>
+
+<div class="card">
+<a href="Shivneri.html"><img src="Shivneri04.jpg"></a>
+<div class="overlay">शिवनेरी किल्ला</div>
+</div>
+
+<div class="card">
+<a href="Suvarnadurg.html"><img src="Suvarnadurg05.jpg"></a>
+<div class="overlay">सुवर्णदुर्ग किल्ला</div>
+</div>
+
+<div class="card">
+<a href="Ahmednagar.html"><img src="Ahmendnagar06.jpg"></a>
+<div class="overlay">अहमदनगर किल्ला</div>
+</div>
+
+<div class="card">
+<a href="Vijaydurg.html"><img src="Vijaydurg07.jpg"></a>
+<div class="overlay">विजयदुर्ग किल्ला</div>
+</div>
+
+<div class="card">
+<a href="harihar.html"><img src="harihar01.jpg"></a>
+<div class="overlay"> हरिहर किल्ला</div>
+</div>
+
+<div class="card">
+<a href="Janjira.html"><img src="Janjira09.jpg"></a>
+<div class="overlay">जंजिरा</div>
+</div>
+
+<div class="card">
+<a href="Karnala.html"><img src="Karnala10.jpg"></a>
+<div class="overlay">कर्नाळा</div>
+</div>
+
+<div class="card">
+<a href="Kolaba.html"><img src="Kolaba11.jpg"></a>
+<div class="overlay">कोळाबा</div>
+</div>
+
+<div class="card">
+<a href="Palgad.html"><img src="Palghad12.jpg"></a>
+<div class="overlay">पालगड किल्ला</div>
+</div>
+
+
+</div>
+</section>
+       <footer>
+    © 2026 महाराष्ट्राचे गड किल्ले | WPD Project
+       </footer>
+</body>
+</html>
