@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>महाराष्ट्राचे गड किल्ले</title>
+
+<style>
+
+/* ---------- GLOBAL ---------- */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Georgia', serif;
+}
+
+body{
+  background:#111;
+  color:white;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1609940824396-7d6f1c3e1c5c') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:60px;
+  letter-spacing:3px;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:20px;
+  color:#f5c26b;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 30px;
+  border:2px solid #f5c26b;
+  color:#f5c26b;
+  text-decoration:none;
+  transition:0.4s;
+}
+
+.btn:hover{
+  background:#f5c26b;
+  color:black;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline{
+  padding:80px 10%;
+  background:#181818;
+}
+
+.timeline h2{
+  text-align:center;
+  margin-bottom:60px;
+  font-size:40px;
+  color:#f5c26b;
+}
+
+.timeline-container{
+  position:relative;
+}
+
+.timeline-container::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  width:4px;
+  height:100%;
+  background:#f5c26b;
+  transform:translateX(-50%);
+}
+
+.timeline-box{
+  width:45%;
+  padding:20px;
+  background:#222;
+  margin-bottom:40px;
+  position:relative;
+  border-radius:10px;
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.timeline-box:nth-child(odd){
+  margin-left:0;
+}
+
+.timeline-box:nth-child(even){
+  margin-left:55%;
+}
+
+.timeline-box h3{
+  color:#f5c26b;
+  margin-bottom:10px;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery{
+  padding:80px 10%;
+}
+
+.gallery h2{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:40px;
+  color:#f5c26b;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  position:relative;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.card:hover img{
+  transform:scale(1.1);
+}
+
+.overlay{
+  position:absolute;
+  bottom:0;
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  text-align:center;
+  padding:15px;
+  font-size:20px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  text-align:center;
+  padding:20px;
+  background:black;
+  color:#f5c26b;
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>महाराष्ट्राचे गड किल्ले</h1>
+    <p>शौर्य • इतिहास • स्वराज्य</p>
+    <a href="#timeline" class="btn">Explore History</a>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline" id="timeline">
+  <h2>शिवकालीन इतिहास</h2>
+  <div class="timeline-container">
+
+    <div class="timeline-box">
+      <h3>1630</h3>
+      <p>शिवनेरी येथे जन्म</p>
+    </div>
+
+    <div class="timeline-box">
+      <h3>1645</h3>
+      <p>तोरणा किल्ला जिंकला</p>
+    </div>
+
+    <div class="timeline-box">
+      <h3>1674</h3>
+      <p>रायगड येथे राज्याभिषेक</p>
+    </div>
+
+    <div class="timeline-box">
+      <h3>1680</h3>
+      <p>महापरिनिर्वाण</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <h2>प्रसिद्ध किल्ले</h2>
+  <div class="gallery-grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603988363607-e1e4b4a3c10f">
+      <div class="overlay">रायगड किल्ला</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1589881133591-7e8a4e0e9b4b">
+      <div class="overlay">प्रतापगड किल्ला</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1593642532400-2682810df593">
+      <div class="overlay">सिंहगड किल्ला</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 महाराष्ट्राचे गड किल्ले | WPD Project
+</footer>
+
+</body>
+</html>
